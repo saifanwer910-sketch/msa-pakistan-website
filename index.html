@@ -1,0 +1,1183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSA Pakistan | Motivate Student Association</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy:#0B1E3A;
+    --gold:#D4AF37;
+    --white:#FFFFFF;
+    --light:#F5F7FA;
+    --text:#182338;
+    --muted:#667085;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+    font-family:'Noto Sans',sans-serif;
+    color:var(--text);
+    background:white;
+    line-height:1.8;
+}
+
+.container {
+    width:min(1180px,91%);
+    margin:auto;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+.urdu {
+    font-family:'Noto Nastaliq Urdu',serif;
+    direction:rtl;
+    line-height:2.2;
+}
+
+header {
+    background:var(--navy);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    border-bottom:2px solid var(--gold);
+}
+
+.navbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:85px;
+}
+
+.brand {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo {
+    height:52px;
+    width:52px;
+    border:2px solid var(--gold);
+    color:var(--gold);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-weight:800;
+}
+
+.brand h2 {
+    font-size:16px;
+    line-height:1.3;
+}
+
+.brand small {
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.nav-links {
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a { font-size:13px; }
+.nav-links a:hover { color:var(--gold); }
+
+.join-nav {
+    border:1px solid var(--gold);
+    padding:7px 15px;
+    border-radius:3px;
+}
+
+.menu-btn {
+    display:none;
+    background:none;
+    color:white;
+    border:none;
+    font-size:27px;
+}
+
+.hero {
+    background:var(--navy);
+    color:white;
+    padding:105px 0 115px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::after {
+    content:"MSA";
+    position:absolute;
+    font-size:250px;
+    font-weight:800;
+    color:rgba(255,255,255,.025);
+    right:-20px;
+    bottom:-70px;
+}
+
+.hero-content {
+    max-width:820px;
+    position:relative;
+    z-index:2;
+}
+
+.tag {
+    display:inline-block;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    padding:5px 14px;
+    letter-spacing:2px;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.hero h1 {
+    font-size:clamp(38px,6vw,72px);
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.hero h1 span { color:var(--gold); }
+
+.hero-urdu {
+    color:var(--gold);
+    font-size:clamp(24px,4vw,36px);
+    margin:15px 0 20px;
+}
+
+.hero p {
+    color:#DCE3ED;
+    font-size:16px;
+    max-width:720px;
+}
+
+.hero .urdu-desc {
+    color:white;
+    margin-top:12px;
+    font-size:17px;
+}
+
+.buttons {
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:30px;
+}
+
+.btn {
+    padding:12px 24px;
+    display:inline-block;
+    border-radius:4px;
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.btn-gold {
+    background:var(--gold);
+    color:var(--navy);
+    border:none;
+}
+
+.btn-outline {
+    border:1px solid white;
+    color:white;
+}
+
+section { padding:80px 0; }
+
+.heading {
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.heading .label {
+    color:#9C7916;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.heading h2 {
+    font-size:35px;
+    color:var(--navy);
+    margin-top:8px;
+}
+
+.heading .urdu {
+    font-size:25px;
+    color:var(--navy);
+}
+
+.line {
+    width:65px;
+    height:3px;
+    background:var(--gold);
+    margin:15px auto;
+}
+
+.heading p {
+    color:var(--muted);
+    max-width:700px;
+    margin:10px auto;
+}
+
+.about-grid {
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+.about-banner {
+    background:var(--navy);
+    color:white;
+    border-left:5px solid var(--gold);
+    padding:38px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.about-banner h3 {
+    font-size:27px;
+    color:var(--gold);
+}
+
+.about-banner .urdu {
+    font-size:23px;
+    margin:15px 0;
+}
+
+.about-content h3 {
+    color:var(--navy);
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.about-content p {
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.about-content .urdu {
+    font-size:17px;
+    color:#374151;
+}
+
+.light-section { background:var(--light); }
+
+.two-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.info-card {
+    background:white;
+    padding:32px;
+    border-top:3px solid var(--gold);
+    box-shadow:0 8px 28px rgba(11,30,58,.05);
+}
+
+.info-card h3 {
+    font-size:24px;
+    color:var(--navy);
+}
+
+.info-card .urdu-title {
+    font-size:25px;
+    color:var(--navy);
+    margin:5px 0 15px;
+}
+
+.info-card p { color:var(--muted); }
+.info-card .urdu {
+    color:#39465A;
+    font-size:17px;
+    margin-top:12px;
+}
+
+.program-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.program-card {
+    border:1px solid #E4E8EF;
+    padding:27px;
+    transition:.25s;
+}
+
+.program-card:hover {
+    border-color:var(--gold);
+    transform:translateY(-4px);
+}
+
+.program-card .icon { font-size:30px; }
+
+.program-card h3 {
+    color:var(--navy);
+    margin:10px 0;
+}
+
+.program-card .urdu-title {
+    font-size:22px;
+    color:var(--navy);
+}
+
+.program-card p {
+    font-size:14px;
+    color:var(--muted);
+    margin-top:10px;
+}
+
+.program-card .urdu {
+    font-size:16px;
+    color:#465266;
+}
+
+.structure {
+    background:var(--navy);
+    color:white;
+}
+
+.structure .heading h2,
+.structure .heading .urdu { color:white; }
+
+.structure .heading p { color:#DCE3ED; }
+
+.structure-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.structure-card {
+    text-align:center;
+    padding:25px 12px;
+    border:1px solid rgba(212,175,55,.45);
+}
+
+.structure-card h3 { color:var(--gold); }
+.structure-card .urdu { font-size:18px; }
+.structure-card p { color:#DCE3ED; font-size:13px; }
+
+.founder { background:var(--light); }
+
+.founder-box {
+    background:white;
+    border-left:4px solid var(--gold);
+    padding:35px;
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.founder-box h3 {
+    color:var(--navy);
+    font-size:27px;
+}
+
+.founder-box .urdu {
+    font-size:22px;
+    margin:10px 0;
+}
+
+.founder-name {
+    color:#9C7916;
+    font-weight:800;
+    font-size:23px;
+    margin:20px 0;
+}
+
+/* MEMBERSHIP FORM */
+
+.join {
+    background:var(--white);
+}
+
+.join-box {
+    background:var(--navy);
+    color:white;
+    padding:55px 30px;
+    border-bottom:5px solid var(--gold);
+    border-radius:5px;
+}
+
+.join-intro {
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.join-intro h2 { font-size:34px; }
+
+.join-intro .urdu {
+    font-size:27px;
+    color:var(--gold);
+    margin:12px 0;
+}
+
+.join-intro p {
+    color:#DCE3ED;
+    max-width:700px;
+    margin:10px auto;
+}
+
+.form-heading {
+    text-align:center;
+    color:var(--gold);
+    font-size:26px;
+    margin:35px 0 8px;
+}
+
+.form-subtitle {
+    text-align:center;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.form-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group.full-width {
+    grid-column:1/-1;
+}
+
+.form-group label {
+    color:white;
+    font-size:14px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width:100%;
+    padding:13px;
+    border:1px solid #D4AF37;
+    border-radius:4px;
+    background:white;
+    color:#182338;
+    font-family:'Noto Sans',sans-serif;
+    font-size:14px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    box-shadow:0 0 0 3px rgba(212,175,55,.25);
+}
+
+.form-group textarea {
+    min-height:110px;
+    resize:vertical;
+}
+
+.form-note {
+    color:#DCE3ED;
+    font-size:12px;
+    margin-top:15px;
+}
+
+.submit-area {
+    text-align:center;
+    margin-top:30px;
+}
+
+.submit-btn {
+    padding:14px 30px;
+    font-size:15px;
+}
+
+#formMessage {
+    text-align:center;
+    margin-top:18px;
+    color:var(--gold);
+    font-weight:600;
+}
+
+footer {
+    background:#07152A;
+    color:white;
+    padding:45px 0 20px;
+}
+
+.footer-grid {
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+footer h3 {
+    color:var(--gold);
+    margin-bottom:12px;
+}
+
+footer p, footer a {
+    color:#C9D2DF;
+    font-size:14px;
+}
+
+.footer-links {
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.footer-links a:hover { color:var(--gold); }
+
+.copyright {
+    border-top:1px solid rgba(255,255,255,.13);
+    text-align:center;
+    padding-top:18px;
+    font-size:12px;
+    color:#AAB5C5;
+}
+
+@media(max-width:900px) {
+    .menu-btn { display:block; }
+
+    .nav-links {
+        display:none;
+        position:absolute;
+        top:85px;
+        left:0;
+        right:0;
+        background:var(--navy);
+        padding:22px;
+        flex-direction:column;
+        border-bottom:2px solid var(--gold);
+    }
+
+    .nav-links.active { display:flex; }
+
+    .about-grid { grid-template-columns:1fr; }
+    .program-grid { grid-template-columns:1fr 1fr; }
+    .structure-grid { grid-template-columns:1fr 1fr; }
+    .footer-grid { grid-template-columns:1fr 1fr; }
+}
+
+@media(max-width:600px) {
+    .hero { padding:75px 0; }
+    section { padding:60px 0; }
+    .hero h1 { font-size:42px; }
+    .hero-urdu { font-size:25px; }
+    .heading h2 { font-size:29px; }
+    .heading .urdu { font-size:22px; }
+
+    .program-grid,
+    .two-grid,
+    .structure-grid,
+    .footer-grid,
+    .form-grid {
+        grid-template-columns:1fr;
+    }
+
+    .brand h2 { font-size:13px; }
+    .logo { width:44px; height:44px; }
+    .join-box { padding:35px 18px; }
+    .form-group.full-width { grid-column:auto; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<a href="#home" class="brand">
+    <div class="logo">MSA</div>
+    <div>
+        <h2>Motivate Student Association</h2>
+        <small>PAKISTAN</small>
+    </div>
+</a>
+
+<button class="menu-btn" id="menuBtn">☰</button>
+
+<nav class="nav-links" id="navLinks">
+    <a href="#home">Home | ہوم</a>
+    <a href="#about">About | تعارف</a>
+    <a href="#mission">Mission | مقصد</a>
+    <a href="#programs">Programs | پروگرام</a>
+    <a href="#structure">Structure | ڈھانچہ</a>
+    <a href="#join" class="join-nav">Join MSA | شامل ہوں</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+<div class="tag">YOUTH • LEADERSHIP • FUTURE</div>
+
+<h1>Empowering Youth.<br><span>Building Tomorrow.</span></h1>
+
+<h2 class="urdu hero-urdu">
+نوجوانوں کو بااختیار بنانا، روشن مستقبل تعمیر کرنا
+</h2>
+
+<p>A platform for education, leadership, skills, sports and positive change.</p>
+
+<p class="urdu urdu-desc">
+تعلیم، قیادت، صلاحیتوں، کھیل اور مثبت تبدیلی کے لیے نوجوانوں کا ایک پلیٹ فارم۔
+</p>
+
+<div class="buttons">
+<a href="#about" class="btn btn-gold">Discover MSA | تعارف</a>
+<a href="#join" class="btn btn-outline">Join MSA | شامل ہوں</a>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container">
+
+<div class="heading">
+<span class="label">WHO WE ARE • ہم کون ہیں</span>
+<h2>About MSA Pakistan</h2>
+<div class="urdu">موٹیویٹ اسٹوڈنٹ ایسوسی ایشن پاکستان</div>
+<div class="line"></div>
+</div>
+
+<div class="about-grid">
+
+<div class="about-banner">
+<h3>One Platform.<br>Many Opportunities.</h3>
+<div class="urdu">ایک پلیٹ فارم، بے شمار مواقع</div>
+<p>A platform where young people learn, grow, connect and lead.</p>
+<p class="urdu">ایک ایسا پلیٹ فارم جہاں نوجوان سیکھیں، آگے بڑھیں، متحد ہوں اور قیادت کریں۔</p>
+</div>
+
+<div class="about-content">
+<h3>Motivate Student Association</h3>
+
+<p>
+Motivate Student Association Pakistan is a youth-focused organization established on 13 January 2024.
+</p>
+
+<p class="urdu">
+موٹیویٹ اسٹوڈنٹ ایسوسی ایشن پاکستان نوجوانوں کی ایک تنظیم ہے، جس کا قیام 13 جنوری 2024 کو عمل میں آیا۔
+</p>
+
+<p>
+MSA works to provide opportunities for youth to discover their talents, develop skills, express ideas and participate in constructive activities.
+</p>
+
+<p class="urdu">
+ایم ایس اے نوجوانوں کو اپنی صلاحیتیں پہچاننے، مہارتیں سیکھنے، خیالات کے اظہار اور مثبت سرگرمیوں میں حصہ لینے کے مواقع فراہم کرنے کے لیے کام کرتی ہے۔
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- MISSION AND VISION -->
+
+<section id="mission" class="light-section">
+<div class="container">
+
+<div class="heading">
+<span class="label">OUR PURPOSE • ہمارا مقصد</span>
+<h2>Mission & Vision</h2>
+<div class="urdu">مشن اور وژن</div>
+<div class="line"></div>
+</div>
+
+<div class="two-grid">
+
+<div class="info-card">
+<h3>Our Mission</h3>
+<div class="urdu-title urdu">ہمارا مشن</div>
+<p>
+To motivate and empower youth through education, leadership, sports, skills, awareness and meaningful opportunities.
+</p>
+<p class="urdu">
+تعلیم، قیادت، کھیل، مہارتوں، شعور اور بامقصد مواقع کے ذریعے نوجوانوں کی حوصلہ افزائی اور انہیں بااختیار بنانا۔
+</p>
+</div>
+
+<div class="info-card">
+<h3>Our Vision</h3>
+<div class="urdu-title urdu">ہمارا وژن</div>
+<p>
+To build a united, educated, skilled and responsible generation contributing towards a brighter Pakistan.
+</p>
+<p class="urdu">
+ایک متحد، تعلیم یافتہ، باصلاحیت اور ذمہ دار نسل کی تشکیل جو پاکستان کے روشن مستقبل میں اپنا کردار ادا کرے۔
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROGRAMS -->
+
+<section id="programs">
+<div class="container">
+
+<div class="heading">
+<span class="label">OUR ACTIVITIES • ہماری سرگرمیاں</span>
+<h2>Programs & Initiatives</h2>
+<div class="urdu">پروگرام اور سرگرمیاں</div>
+<div class="line"></div>
+<p>Opportunities to learn, develop, participate and make a difference.</p>
+<p class="urdu">سیکھنے، آگے بڑھنے، حصہ لینے اور مثبت تبدیلی لانے کے مواقع۔</p>
+</div>
+
+<div class="program-grid">
+
+<div class="program-card">
+<div class="icon">📚</div>
+<h3>Education</h3>
+<div class="urdu urdu-title">تعلیم</div>
+<p>Educational guidance, student support and learning activities.</p>
+<p class="urdu">تعلیمی رہنمائی، طلبہ کی معاونت اور سیکھنے کی سرگرمیاں۔</p>
+</div>
+
+<div class="program-card">
+<div class="icon">🎤</div>
+<h3>Public Speaking</h3>
+<div class="urdu urdu-title">تقریری مقابلے</div>
+<p>Speech competitions, debates and communication development.</p>
+<p class="urdu">تقریری مقابلے، مباحثے اور اظہارِ خیال کی صلاحیتوں میں بہتری۔</p>
+</div>
+
+<div class="program-card">
+<div class="icon">⚽</div>
+<h3>Sports</h3>
+<div class="urdu urdu-title">کھیل</div>
+<p>Sports activities, competitions, teamwork and participation.</p>
+<p class="urdu">کھیلوں کی سرگرمیاں، مقابلے، ٹیم ورک اور نوجوانوں کی شرکت۔</p>
+</div>
+
+<div class="program-card">
+<div class="icon">💻</div>
+<h3>Digital Skills</h3>
+<div class="urdu urdu-title">ڈیجیٹل مہارتیں</div>
+<p>Technology awareness and modern digital learning.</p>
+<p class="urdu">ٹیکنالوجی سے آگاہی اور جدید ڈیجیٹل تعلیم۔</p>
+</div>
+
+<div class="program-card">
+<div class="icon">🤝</div>
+<h3>Social Awareness</h3>
+<div class="urdu urdu-title">سماجی شعور</div>
+<p>Community activities and awareness initiatives.</p>
+<p class="urdu">سماجی سرگرمیاں اور عوامی شعور اجاگر کرنے کی کوششیں۔</p>
+</div>
+
+<div class="program-card">
+<div class="icon">👥</div>
+<h3>Youth Leadership</h3>
+<div class="urdu urdu-title">نوجوان قیادت</div>
+<p>Leadership development, responsibility and teamwork.</p>
+<p class="urdu">قیادت کی صلاحیت، ذمہ داری اور اجتماعی کام کو فروغ دینا۔</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ORGANIZATIONAL STRUCTURE -->
+
+<section id="structure" class="structure">
+<div class="container">
+
+<div class="heading">
+<span class="label">OUR NETWORK • ہمارا نیٹ ورک</span>
+<h2>Organizational Structure</h2>
+<div class="urdu">تنظیمی ڈھانچہ</div>
+<div class="line"></div>
+<p>A coordinated youth network across different levels of Pakistan.</p>
+<p class="urdu">پاکستان بھر میں مختلف سطحوں پر منظم نوجوانوں کا نیٹ ورک۔</p>
+</div>
+
+<div class="structure-grid">
+
+<div class="structure-card">
+<h3>Central Level</h3>
+<div class="urdu">مرکزی سطح</div>
+<p>National Coordination</p>
+</div>
+
+<div class="structure-card">
+<h3>Provincial Level</h3>
+<div class="urdu">صوبائی سطح</div>
+<p>Provincial Organization</p>
+</div>
+
+<div class="structure-card">
+<h3>District Level</h3>
+<div class="urdu">ضلعی سطح</div>
+<p>District Coordination</p>
+</div>
+
+<div class="structure-card">
+<h3>Tehsil Level</h3>
+<div class="urdu">تحصیل سطح</div>
+<p>Local Organization</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOUNDER -->
+
+<section class="founder">
+<div class="container">
+
+<div class="heading">
+<span class="label">LEADERSHIP • قیادت</span>
+<h2>Founder</h2>
+<div class="urdu">بانی</div>
+<div class="line"></div>
+</div>
+
+<div class="founder-box">
+<h3>Founder of MSA Pakistan</h3>
+<div class="urdu">موٹیویٹ اسٹوڈنٹ ایسوسی ایشن پاکستان کے بانی</div>
+
+<div class="founder-name">Mr. Saif Anwer</div>
+
+<p>
+Established Motivate Student Association Pakistan on 13 January 2024 with the vision of motivating youth and creating opportunities for their growth and development.
+</p>
+
+<p class="urdu">
+13 جنوری 2024 کو نوجوانوں کی حوصلہ افزائی، ترقی اور انہیں آگے بڑھنے کے مواقع فراہم کرنے کے وژن کے ساتھ موٹیویٹ اسٹوڈنٹ ایسوسی ایشن پاکستان کی بنیاد رکھی۔
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- MEMBERSHIP REGISTRATION -->
+
+<section id="join" class="join">
+<div class="container">
+
+<div class="join-box">
+
+<div class="join-intro">
+<h2>Be Part of the Change</h2>
+<div class="urdu">تبدیلی کا حصہ بنیں</div>
+
+<p>
+Join Motivate Student Association Pakistan and become part of a platform for learning, leadership, service and growth.
+</p>
+
+<p class="urdu">
+موٹیویٹ اسٹوڈنٹ ایسوسی ایشن پاکستان کا حصہ بنیں اور تعلیم، قیادت، خدمت اور ترقی کے اس سفر میں ہمارے ساتھ شامل ہوں۔
+</p>
+</div>
+
+<div class="line"></div>
+
+<h3 class="form-heading">MSA Membership Registration</h3>
+<p class="urdu form-subtitle">ایم ایس اے کی رکنیت کے لیے درخواست فارم</p>
+
+<form id="membershipForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Full Name | مکمل نام *</label>
+<input type="text" name="fullName" placeholder="Enter your full name" required>
+</div>
+
+<div class="form-group">
+<label>Father's Name | والد کا نام *</label>
+<input type="text" name="fatherName" placeholder="Enter father's name" required>
+</div>
+
+<div class="form-group">
+<label>Mobile Number | موبائل نمبر *</label>
+<input type="tel" name="mobile" placeholder="03XXXXXXXXX" required>
+</div>
+
+<div class="form-group">
+<label>WhatsApp Number | واٹس ایپ نمبر *</label>
+<input type="tel" name="whatsapp" placeholder="03XXXXXXXXX" required>
+</div>
+
+<div class="form-group">
+<label>Email Address | ای میل *</label>
+<input type="email" name="email" placeholder="Enter your email address" required>
+</div>
+
+<div class="form-group">
+<label>Date of Birth | تاریخ پیدائش *</label>
+<input type="date" name="dateOfBirth" required>
+</div>
+
+<div class="form-group">
+<label>Gender | جنس *</label>
+<select name="gender" required>
+<option value="">Select Gender</option>
+<option value="Male">Male | مرد</option>
+<option value="Female">Female | خواتین</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Province | صوبہ *</label>
+<select name="province" required>
+<option value="">Select Province</option>
+<option value="Sindh">Sindh</option>
+<option value="Punjab">Punjab</option>
+<option value="Balochistan">Balochistan</option>
+<option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+<option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+<option value="Islamabad">Islamabad</option>
+<option value="Azad Jammu & Kashmir">Azad Jammu & Kashmir</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>District | ضلع *</label>
+<input type="text" name="district" placeholder="Enter your district" required>
+</div>
+
+<div class="form-group">
+<label>City | شہر *</label>
+<input type="text" name="city" placeholder="Enter your city" required>
+</div>
+
+<div class="form-group">
+<label>Tehsil | تحصیل *</label>
+<input type="text" name="tehsil" placeholder="Enter your tehsil" required>
+</div>
+
+<div class="form-group">
+<label>Educational Qualification | تعلیمی قابلیت *</label>
+<select name="education" required>
+<option value="">Select Education</option>
+<option>Primary</option>
+<option>Middle</option>
+<option>Matric</option>
+<option>Intermediate</option>
+<option>Bachelor's</option>
+<option>Master's</option>
+<option>MPhil</option>
+<option>PhD</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group full-width">
+<label>Complete Address | مکمل پتہ *</label>
+<textarea name="address" placeholder="Enter your complete address" required></textarea>
+</div>
+
+<div class="form-group full-width">
+<label>Application Type | درخواست کی قسم *</label>
+<select name="applicationType" required>
+<option value="">Select Application Type</option>
+<option value="General Membership">General Membership</option>
+<option value="Volunteer Registration">Volunteer Registration</option>
+<option value="Office Bearer Application">Office Bearer Application</option>
+</select>
+</div>
+
+<div class="form-group full-width">
+<label>Why do you want to join MSA? | آپ MSA میں کیوں شامل ہونا چاہتے ہیں؟ *</label>
+<textarea name="reason" placeholder="Tell us why you want to join MSA..." required></textarea>
+</div>
+
+</div>
+
+<p class="form-note">
+* All fields are required. Please provide accurate information.
+</p>
+
+<p class="urdu form-note">
+تمام خانے پُر کرنا ضروری ہیں۔ براہِ کرم درست معلومات فراہم کریں۔
+</p>
+
+<div class="submit-area">
+<button type="submit" class="btn btn-gold submit-btn">
+Submit Application | درخواست جمع کروائیں
+</button>
+</div>
+
+<p id="formMessage"></p>
+
+</form>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h3>Motivate Student Association Pakistan</h3>
+<p>Empowering Youth. Building Tomorrow.</p>
+<p class="urdu">نوجوانوں کو بااختیار بنانا، روشن مستقبل تعمیر کرنا۔</p>
+<p>Established: 13 January 2024</p>
+<p class="urdu">قیام: 13 جنوری 2024</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<div class="footer-links">
+<a href="#home">Home | ہوم</a>
+<a href="#about">About | تعارف</a>
+<a href="#mission">Mission | مشن</a>
+<a href="#programs">Programs | پروگرام</a>
+</div>
+</div>
+
+<div>
+<h3>Explore MSA</h3>
+<div class="footer-links">
+<a href="#structure">Organization | تنظیم</a>
+<a href="#join">Membership | رکنیت</a>
+<a href="#programs">Activities | سرگرمیاں</a>
+</div>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Motivate Student Association Pakistan. All Rights Reserved.
+<br>
+<span class="urdu">تمام حقوق محفوظ ہیں۔</span>
+</div>
+
+</div>
+</footer>  
+
+<script>
+/* MOBILE MENU */
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+});
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+document.querySelectorAll("#navLinks a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+    });
+});
+
+/* MEMBERSHIP FORM */
+const membershipForm = document.getElementById("membershipForm");
+const formMessage = document.getElementById("formMessage");
+const submitBtn = membershipForm.querySelector(".submit-btn");
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbwauMER0IA33BUfznHi1B4uSSBXswVHC3VvexkzqWiMGNYsNSuyKxggOWfhcWJb1OKYfw/exec";
+
+let isSubmitting = false;
+
+membershipForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    if (isSubmitting) return;
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    formMessage.textContent = "Please wait...";
+
+    const data = {
+        fullName: membershipForm.elements["fullName"].value.trim(),
+        fatherName: membershipForm.elements["fatherName"].value.trim(),
+        mobileNumber: membershipForm.elements["mobile"].value.trim(),
+        whatsappNumber: membershipForm.elements["whatsapp"].value.trim(),
+        email: membershipForm.elements["email"].value.trim(),
+        dateOfBirth: membershipForm.elements["dateOfBirth"].value,
+        gender: membershipForm.elements["gender"].value,
+        province: membershipForm.elements["province"].value,
+        district: membershipForm.elements["district"].value.trim(),
+        city: membershipForm.elements["city"].value.trim(),
+        tehsil: membershipForm.elements["tehsil"].value.trim(),
+        education: membershipForm.elements["education"].value,
+        address: membershipForm.elements["address"].value.trim(),
+        applicationType: membershipForm.elements["applicationType"].value,
+        whyJoin: membershipForm.elements["reason"].value.trim()
+    };
+
+    try {
+        await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(data)
+        });
+
+        formMessage.textContent =
+            "Request submitted. Please check the Google Sheet to confirm receipt.";
+
+        submitBtn.textContent = "Submitted";
+
+        membershipForm.reset();
+
+    } catch (error) {
+        console.error("Submission error:", error);
+
+        formMessage.textContent =
+            "Submission could not be confirmed. Please try again.";
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Application | درخواست جمع کروائیں";
+        isSubmitting = false;
+    }
+});
+</script>
+
+</body>
+</html>
